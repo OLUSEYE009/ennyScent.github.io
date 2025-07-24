@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="ennyScentLogo.jpg">
+    <title>ennyScent - Luxury Perfumes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+    <div class="preloader">
+        <div class="loader">
+            <div class="bottle"></div>
+            <div class="splash"></div>
+        </div>
+    </div>
+
+    
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Eniola Scent</a>
+
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <div class="nav-icons">
+                    <a href="#search" id="search-btn"><i class="fas fa-search"></i></a>
+                    <a href="#cart" id="cart-btn"><i class="fas fa-shopping-cart"></i><span
+                            class="cart-count">0</span></a>
+                    <a href="#user" id="user-btn"><i class="fas fa-user"></i></a>
+                </div>
+            </nav>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+         
+            <div class="search-form" id="search-form">
+                <input type="search" id="search-box" placeholder="Search perfumes...">
+                <label for="search-box"><i class="fas fa-search"></i></label>
+            </div>
+        </div>
+    </header>
+
+   
+    <div class="mobile-menu" id="mobile-menu">
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+
+    <div class="shopping-cart" id="shopping-cart">
+        <h3>Your Cart</h3>
+        <div class="cart-items">
+            <!-- Cart items will be added here dynamically -->
+        </div>
+        <div class="cart-total">
+            <p>Total: <span>&#x20A6;0.00</span></p>
+            <button class="btn checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Login Form -->
+    <div class="login-form" id="login-form">
+        <h3>Login</h3>
+        <form>
+            <input type="email" placeholder="Your Email" class="box">
+            <input type="password" placeholder="Your Password" class="box">
+            <button type="submit" class="btn">Login Now</button>
+            <p>Don't have an account? <a href="#register">Register</a></p>
+        </form>
+    </div>
+
+   
+    <section class="home" id="home">
+        <div class="container">
+            <div class="home-content">
+                <h1 class="home-title">Discover Your Signature Scent</h1>
+                <p class="home-text">Luxury perfumes crafted with passion and precision</p>
+                <a href="#shop" class="btn">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About ennyScent</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <!--<img src="images/about.jpg" alt="About ennyScent">-->
+                    <img src="ennyScentLogo.jpg" alt="About ennyScent">
+                </div>
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Founded in 2025, ennyScent is dedicated to bringing you the finest luxury fragrances from around
+                        the world. Our perfumes are carefully curated to evoke emotions and create lasting memories.</p>
+                    <p>Each bottle is a masterpiece, blending rare ingredients with modern craftsmanship to create
+                        scents that are truly unforgettable.</p>
+                    <a href="#shop" class="btn">Explore Our Collection</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section class="shop" id="shop">
+        <div class="container">
+            <h2 class="section-title">Our Collection</h2>
+
+            <!-- Filter Controls -->
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="women">Women</button>
+                <button class="filter-btn" data-filter="men">Men</button>
+                <button class="filter-btn" data-filter="unisex">Unisex</button>
+                <div class="price-filter">
+                    <label for="price-range">Price Range:</label>
+                    <input type="range" id="price-range" min="25000" max="50000" value="1000">
+                    <span id="price-value">&#x20A6;0 - &#x20A6;50,000</span>
+                </div>
+            </div>
+
+            <!-- Search Results -->
+            <div class="search-results" id="search-results"></div>
+
+            <!-- Product Grid -->
+            <div class="product-grid" id="product-grid">
+                <!-- Products will be added dynamically -->
+            </div>
+        </div>
+    </section>
+
+   
+    <div class="product-modal" id="product-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- Content will be added dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    
+                    <p><i class="fas fa-map-marker-alt"></i> 4, Awin Close, Lagos State</p>
+                    <p><i class="fas fa-phone"></i><a href="call:09014014807"> +234 903 515 6230</a></p>
+                    <p><i class="fas fa-envelope"></i><a href="mailto:eniolaopaleke@gmail.com">eniolaopaleke@gmail.com</a></p>
+                </div>
+                <div class="contact-form">
+                    <h3>Send us a message</h3>
+                    <form id="complaint-form" action="mailto:eniolaopaleke@gmail.com">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="text" placeholder="Subject">
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Modal -->
+    <div class="checkout-modal" id="checkout-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Checkout</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name"placeholder="Fullname" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Email Address">
+                </div>
+                <div class="form-group">
+                    <label for="address">Shipping Address</label>
+                    <textarea id="address" required placeholder="Your home address and phone number"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="payment">Payment Method</label>
+                    <select id="payment" required>
+                        <option value="">Select Payment</option>
+                        <option value="credit">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bank">Bank Transfer</option>
+                        <option value="#">Please Note This is Just for Demo For now U will need to pay directly to the seller</option>
+                    </select>
+                </div>
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-items">
+                        <!-- Items will be added dynamically -->
+                    </div>
+                    <div class="summary-total">
+                        <p>Total: <span>$0.00</span></p>
+                    </div>
+                </div>
+                <button type="submit" class="btn">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Order Confirmation -->
+    <div class="confirmation-modal" id="confirmation-modal">
+        <div class="modal-content">
+            <i class="fas fa-check-circle"></i>
+            <h2>Order Confirmed!</h2>
+            <p>Thank you for your purchase. A confirmation email has been sent to your email address.</p>
+            <button class="btn close-confirmation">Continue Shopping</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>ennyScent</h3>
+                    <p>Luxury perfumes for every occasion. Discover your signature scent with our exquisite collection.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="shipping.html">Shipping & Returns</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new arrivals and special offers.</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ennyScent.(Built By <a href="#">OYE</a>) All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="animations.js"></script>
+</body>
+</html>
+
+<!--I did this project to develop my frontend skill-->
